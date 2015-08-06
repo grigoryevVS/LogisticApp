@@ -1,0 +1,18 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="${database.hbm2ddl.auto}"/>
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+            <property name="hibernate.show_sql" value="${database.show_sql}"/>
+            <property name="hibernate.format_sql" value="${database.format_sql}"/>
+            <property name="hibernate.connection.driver_class" value="${database.driver}"/>
+            <property name="hibernate.connection.username" value="${database.user}"/>
+            <property name="hibernate.connection.password" value="${database.password}"/>
+            <property name="hibernate.connection.url" value="${database.url}" />
+            <property name="hibernate.dialect" value="${database.dialect}"/>
+        </properties>
+    </persistence-unit>
+</persistence>
