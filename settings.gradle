@@ -1,0 +1,5 @@
+rootProject.name = 'LogisticApp'
+include 'server'
+include 'model'
+include 'logisticUI'
+
