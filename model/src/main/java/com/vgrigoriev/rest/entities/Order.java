@@ -1,8 +1,10 @@
 package com.vgrigoriev.rest.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
@@ -10,6 +12,8 @@ import java.util.Date;
 /**
  * author vgrigoriev on 06.08.2015.
  */
+@Entity
+@Table(name = "orders")
 public class Order extends BaseEntity {
 
     @Column(nullable = false)

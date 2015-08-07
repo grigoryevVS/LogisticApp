@@ -1,12 +1,16 @@
 package com.vgrigoriev.rest.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
 
 /**
  * author vgrigoriev on 06.08.2015.
  */
+@Entity
+@Table(name = "customers")
 public class Customer extends BaseEntity {
 
     @OneToMany(mappedBy = "customer")
