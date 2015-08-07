@@ -1,4 +1,4 @@
-package com.vgrigoriev.dao;
+package com.vgrigoriev.rest.dao;
 
 /**
  * author vgrigoriev on 06.08.2015.

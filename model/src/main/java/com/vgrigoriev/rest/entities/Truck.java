@@ -1,4 +1,4 @@
-package com.vgrigoriev.entities;
+package com.vgrigoriev.rest.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,6 +6,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -30,6 +31,9 @@ public class Truck extends BaseEntity{
 
     @OneToMany ( mappedBy = "truck")
     private Set<Driver> drivers;
+
+    @OneToMany(mappedBy = "linkedTruck")
+    private List<Order> orders;
 
 
 
@@ -73,5 +77,13 @@ public class Truck extends BaseEntity{
 
     public void setDrivers(Set<Driver> drivers) {
         this.drivers = drivers;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 }
