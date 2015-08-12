@@ -1,4 +1,4 @@
-package com.vgrigoriev.rest.entities;
+package com.vgrigoriev.entities;
 
 /**
  * author vgrigoriev on 07.08.2015.

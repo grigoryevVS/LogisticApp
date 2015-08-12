@@ -1,4 +1,4 @@
-package com.vgrigoriev.rest.entities;
+package com.vgrigoriev.entities;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

@@ -14,4 +14,10 @@ dependencies {
     compile 'org.hibernate:hibernate-core:4.3.9.Final'
     compile 'org.hibernate:hibernate-entitymanager:4.3.9.Final'
     compile 'javax.validation:validation-api:1.1.0.Final'
+    compile 'mysql:mysql-connector-java:5.1.6'
+    compile 'javax.persistence:persistence-api:1.0.2'
+    compile 'org.springframework:spring-context:4.2.0.RELEASE'
+    compile 'org.springframework:spring-core:4.2.0.RELEASE'
+    compile 'org.springframework:spring-tx:4.2.0.RELEASE'
+    compile 'org.springframework:spring-aop:4.2.0.RELEASE'
 }

@@ -1,4 +1,4 @@
-package com.vgrigoriev.rest.orders;
+package com.vgrigoriev.orders;
 
 /**
  * author vgrigoriev on 07.08.2015.
