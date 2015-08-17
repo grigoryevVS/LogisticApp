@@ -22,13 +22,13 @@ public class GenericDaoImpl<T extends BaseEntity> implements GenericDao<T> {
     }
 
     @Override
-    public List<T> get() {
+    public List<T> getAll() {
         return null;
     }
 
     @Override
     public T merge(T entity) {
-        return null;
+        return entityManager.merge(entity);
     }
 
     @Override
@@ -37,7 +37,9 @@ public class GenericDaoImpl<T extends BaseEntity> implements GenericDao<T> {
     }
 
     @Override
-    public void update(T entity) {
-
+    public void create(T entity) {
+        entityManager.persist(entity);
     }
+
+
 }

@@ -3,15 +3,15 @@
     <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="hibernate.connection.driver_class" value="${database.driver}"/>
-            <property name="hibernate.hbm2ddl.auto" value="${database.hbm2ddl.auto}"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.archive.autodetection" value="class, hbm"/>
-            <property name="hibernate.show_sql" value="${database.show_sql}"/>
+            <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="false"/>
             <property name="hibernate.connection.username" value="${database.user}"/>
             <property name="hibernate.connection.password" value="${database.password}"/>
             <property name="hibernate.connection.url" value="${database.url}" />
-            <property name="hibernate.dialect" value="${database.dialect}"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
         </properties>
     </persistence-unit>
 </persistence>

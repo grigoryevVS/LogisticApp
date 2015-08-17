@@ -9,11 +9,11 @@ public interface GenericDao<T> {
 
     T get(Long id);
 
-    List<T> get();
+    List<T> getAll();
 
     T merge(T entity);
 
     void delete(T entity);
 
-    void update(T entity);
+    void create(T entity);
 }

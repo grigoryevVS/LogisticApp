@@ -16,9 +16,9 @@
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <!--<bean id="jdbcPropertyConfigurer"-->
-          <!--class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"-->
-          <!--p:location="classpath*:jdbc.properties"/>-->
+    <bean id="jdbcPropertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+          p:location="classpath*:jdbc.properties"/>
 
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
