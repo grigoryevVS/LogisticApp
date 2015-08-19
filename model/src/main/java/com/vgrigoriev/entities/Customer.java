@@ -19,6 +19,18 @@ public class Customer extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
+    @Column
+    private String phone;
+
+
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getName() {
         return name;

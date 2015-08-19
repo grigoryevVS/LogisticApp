@@ -3,7 +3,6 @@ package com.vgrigoriev.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,11 +15,8 @@ import java.util.Date;
 @Table(name = "orders")
 public class Order extends BaseEntity {
 
-    @Column(nullable = false)
-    private String source;
-
-    @Column(nullable = false)
-    private String destination;
+    @ManyToOne
+    private Route route;
 
     @Column(nullable = false)
     private int tonnage;
@@ -32,27 +28,18 @@ public class Order extends BaseEntity {
     @Temporal(TemporalType.TIMESTAMP)
     private Date deadline;
 
-    @OneToOne
+    @ManyToOne
     private Truck orderTruck;
 
     @ManyToOne
     private Customer customer;
 
-
-    public String getSource() {
-        return source;
+    public Route getRoute() {
+        return route;
     }
 
-    public void setSource(String source) {
-        this.source = source;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setRoute(Route route) {
+        this.route = route;
     }
 
     public int getTonnage() {

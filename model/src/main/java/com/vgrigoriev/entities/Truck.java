@@ -32,7 +32,7 @@ public class Truck extends BaseEntity{
     @OneToMany ( mappedBy = "truck")
     private Set<Driver> drivers;
 
-    @OneToMany(mappedBy = "linkedTruck")
+    @OneToMany(mappedBy = "orderTruck")
     private List<Order> orders;
 
 
